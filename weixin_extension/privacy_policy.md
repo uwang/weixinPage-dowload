@@ -16,8 +16,8 @@
 
 ### 联系方式
 如果您对本隐私政策有任何疑问，请通过以下方式联系我们：
-- 邮箱：[your-email@example.com]
-- GitHub: [https://github.com/yourusername/weixin_extension]
+- 邮箱：[1186927152@qq.com]
+- GitHub: [https://github.com/Bor-Yau/weixinPage-dowload]
 
 ## 更新日志
 - 2024-03-22: 初始版本发布 
