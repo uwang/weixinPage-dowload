@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "微信文章保存器",
+  "version": "1.0",
+  "description": "保存微信公众号文章内容到本地文件，支持一键保存文章内容和图片",
+  "icons": {
+    "16": "icons/icon1.png",
+    "32": "icons/icon2.png",
+    "48": "icons/icon3.png",
+    "128": "icons/icon4.png"
+  },
+  "action": {
+    "default_title": "微信文章保存器",
+    "default_icon": {
+      "16": "icons/icon1.png",
+      "32": "icons/icon2.png",
+      "48": "icons/icon3.png",
+      "128": "icons/icon4.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "downloads.onDeterminingFilename"
+  ],
+  "host_permissions": ["https://mp.weixin.qq.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["https://mp.weixin.qq.com/*"],
+    "js": ["content.js"]
+  }],
+  "author": "Ayoung",
+  "homepage_url": "https://github.com/Bor-Yau/weixinPage-dowload",
+  "minimum_edge_version": "88.0.0.0",
+  "offline_enabled": true,
+  "short_name": "微信文章保存器"
+}
