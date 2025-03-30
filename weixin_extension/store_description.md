@@ -32,8 +32,8 @@
 ## 技术支持
 
 如果您在使用过程中遇到任何问题，请通过以下方式联系我们：
-- 邮箱：[your-email@example.com]
-- GitHub: [https://github.com/yourusername/weixin_extension]
+- 邮箱：[1186927152@qq.com]
+- GitHub: [https://github.com/Bor-Yau/weixinPage-dowload]
 
 ## 更新日志
 
