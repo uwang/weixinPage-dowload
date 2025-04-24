@@ -16,6 +16,21 @@ function getPublishTime() {
   return timeElement ? timeElement.innerText.trim() : '';
 }
 
+
+// 获取发布时间并格式化为YYYY-MM-DD
+function getFormattedDate() {
+  const timeElement = document.getElementById('publish_time');
+  if (!timeElement) return '';
+  
+  const timeText = timeElement.innerText.trim();
+  // 匹配中文日期格式，如"2025年04月18日 07:44"
+  const match = timeText.match(/(\d{4})年(\d{2})月(\d{2})日/);
+  if (!match) return '';
+  
+  // 返回YYYY-MM-DD格式
+  return `${match[1]}-${match[2]}-${match[3]}`;
+}
+
 // 获取文章正文内容
 function getArticleContent() {
   const article = document.getElementById('js_content');
@@ -82,7 +97,8 @@ function getArticleContent() {
   return {
     html: content,
     images: imageUrls,
-    title: getArticleTitle()
+    title: getArticleTitle(),
+    date: getFormattedDate()
   };
 }
 
@@ -102,8 +118,9 @@ function saveArticle() {
       action: 'saveArticle',
       content: content.html,
       images: content.images,
-      title: content.title
-    }, (response) => {
+      title: content.title,
+      date: content.date
+    }, () => {
       // 恢复按钮状态
       button.disabled = false;
       button.textContent = '保存文章';
