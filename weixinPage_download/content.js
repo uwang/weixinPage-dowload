@@ -88,6 +88,9 @@ function getArticleContent() {
         padding: 0 20px;
         box-sizing: border-box;
       }
+      h1 {
+        font-size: 22px;
+      }
     </style>
     <div class="article-container">
       ${container.innerHTML}
